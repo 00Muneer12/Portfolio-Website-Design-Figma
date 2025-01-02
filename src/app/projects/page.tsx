@@ -2,6 +2,10 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+// Import images at the top of your file
+import figmaResumeImage from "../../../public/FigmaPortfolio1.jpg";
+import cvImage from "../../../public/cvmuneer.jpg";
+
 const Project = () => {
   return (
     <div id="Project">
@@ -19,7 +23,7 @@ const Project = () => {
                 <Image
                   alt="Figma Resume Template"
                   className="absolute inset-0 w-full h-full object-cover object-center"
-                  src={require("../../../public/FigmaPortfolio1.jpg")}
+                  src={figmaResumeImage}
                   width={500}
                   height={300}
                 />
@@ -42,14 +46,13 @@ const Project = () => {
                 </div>
               </div>
             </div>
-            {/* Add more projects here */}
+            {/* Project 2 */}
             <div className="lg:w-1/3 sm:w-1/2 p-4 cursor-pointer">
               <div className="flex relative">
-
                 <Image
                   alt="Figma Resume Template"
                   className="absolute inset-0 w-full h-full object-cover object-center"
-                  src={require("../../../public/cvmuneer.jpg")}
+                  src={cvImage}
                   width={500}
                   height={300}
                 />

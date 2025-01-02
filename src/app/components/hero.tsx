@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div className="grid lg:grid-cols-2 md:grid-cols-1 bg-slate-100 ">
     <div className="ml-[10%] mt-0">
-        <Image src="/MuneerPic-removebg-preview.png" alt="Hero Image" width={400} height={350} className=" ml-[35%]"/> 
+        <Image src="/munpic.png" alt="Hero Image" width={400} height={350} className=" ml-[35%]"/> 
         </div>
       <div>
         <h2 className="text-5xl text-left gap-y-2 ml-[30%] font-bold text-blue-700 mt-24" >Hi <br />I am <br />Ghulam Muneer Uddin <br />

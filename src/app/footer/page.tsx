@@ -1,11 +1,11 @@
+'use client';
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FaFacebook } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaDiscord } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+
+// Import the logo image at the top
+import logoImage from "../../../public/logo-gmu.png";
 
 const Footer = () => {
   return (
@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
           <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
             <Image
-              src={require("../../../public/logo-gmu.png")}
+              src={logoImage}  // Use the imported image here
               alt="GHULAM MUNEER UDDIN"
               width={100}
               height={100}

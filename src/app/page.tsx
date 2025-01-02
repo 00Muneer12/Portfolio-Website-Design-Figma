@@ -1,12 +1,15 @@
-import React from 'react'
-import Hero from './components/hero'
-// import About from './About/page'
+import React from 'react';
+import Hero from './components/hero';
+import About from "./about/page"
 
-export default function Home(){
+
+const Page = () => {
   return (
     <div>
-          <Hero />
-          
+      <Hero />
+      <About />
     </div>
-  )
-}
+  );
+};
+
+export default Page;
