@@ -1,10 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  reactStrictMode: true, // Optional: Enable React Strict Mode for better error handling
+  reactStrictMode: true,
   experimental: {
-    // appDir: true, // Ensure app directory is enabled
-  },
+    // appDir: true, // Temporarily comment this out if it causes issues
+  }
+  
 };
 
 export default nextConfig;
