@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   experimental: {
     // appDir: true, // Temporarily comment this out if it causes issues
-  }
+  },
   
 };
 

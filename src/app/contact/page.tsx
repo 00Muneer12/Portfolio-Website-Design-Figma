@@ -1,83 +1,81 @@
-import React from 'react'
+import React from "react";
 
 const Contact = () => {
   return (
-    <div>
-      <section className="text-white body-font relative">
-  <div className="container px-5 py-24 mx-auto">
-    <div className="flex flex-col text-center w-full mb-12">
-      <h1 className="sm:text-3xl text-2xl font-bold title-font mb-4 text-blue-800">
-        Contact Us
-      </h1>
-      <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-       
-      </p>
-    </div>
-    <div className="lg:w-1/2 md:w-2/3 mx-auto">
-      <div className="flex flex-wrap -m-2">
-        <div className="p-2 w-1/2">
-          <div className="relative">
-            <label htmlFor="name" className="leading-7 text-sm text-gray-600">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-            />
-          </div>
-        </div>
-        <div className="p-2 w-1/2">
-          <div className="relative">
-            <label htmlFor="email" className="leading-7 text-sm text-gray-600">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-            />
-          </div>
-        </div>
-        <div className="p-2 w-full">
-          <div className="relative">
-            <label
-              htmlFor="message"
-              className="leading-7 text-sm text-gray-600"
-            >
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-              defaultValue={""}
-            />
-          </div>
-        </div>
-        <div className="p-2 w-full">
-          <button className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-            SEND
-          </button>
-        </div>
-        <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-          <a className="text-indigo-500">gmugsk@email.com</a>
-          <p className="leading-normal my-5">
-            Latifabad no 09,
-            <br />
-             Hyderabad
+    <section className="bg-slate-100 text-gray-900 py-16">
+      <div className="container mx-auto px-6">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-blue-800">Get in Touch</h1>
+          <p className="mt-2 text-lg text-gray-600">
+            Feel free to reach out. We would love to hear from you!
           </p>
-          
+        </div>
+
+        {/* Contact Form */}
+        <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+          <form className="grid grid-cols-1 gap-6">
+            {/* Name */}
+            <div>
+              <label className="block text-lg font-semibold text-gray-700">
+                Name
+              </label>
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-500"
+              />
+            </div>
+
+            {/* Email */}
+            <div>
+              <label className="block text-lg font-semibold text-gray-700">
+                Email
+              </label>
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-500"
+              />
+            </div>
+
+            {/* Message */}
+            <div>
+              <label className="block text-lg font-semibold text-gray-700">
+                Message
+              </label>
+              <textarea
+                rows={5}
+                placeholder="Your Message..."
+                className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-500"
+              ></textarea>
+            </div>
+
+            {/* Send Button */}
+            <div className="text-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+
+        {/* Contact Info */}
+        <div className="text-center mt-12">
+          <p className="text-lg font-semibold text-gray-700">Contact Email:</p>
+          <a
+            href="mailto:gmugsk@email.com"
+            className="text-blue-600 text-lg hover:underline"
+          >
+            gmugsk@email.com
+          </a>
+
+          <p className="mt-4 text-lg font-semibold text-gray-700">Address:</p>
+          <p className="text-gray-600">Latifabad No. 09, Hyderabad</p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+  );
+};
 
-    </div>
-  )
-}
-
-export default Contact
+export default Contact;

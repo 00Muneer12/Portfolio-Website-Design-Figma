@@ -1,74 +1,47 @@
 'use client';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import Image from 'next/image';
 import { FaLinkedin, FaGithub, FaWhatsapp, FaFacebook } from 'react-icons/fa';
 import { SiVercel } from 'react-icons/si';
 
-// Define prop types for the Button component
+// Button Component
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
 }
 
-// Button Component
 const Button: React.FC<ButtonProps> = ({ children, className = '', ...props }) => (
-  <button className={`py-2 px-6 text-lg rounded ${className}`} {...props}>
+  <button
+    className={`py-3 px-8 text-lg font-semibold rounded-full transition duration-300 ease-in-out transform hover:scale-105 shadow-md ${className}`}
+    {...props}
+  >
     {children}
   </button>
 );
 
 // About Component
-const About = () => {
+const About: React.FC = () => {
   return (
-    <div className="text-blue-600 body-font bg-slate-100">
-      <div className="container mx-auto flex px-5 py-10 items-center justify-center flex-col">
+    <div className="text-blue-900 body-font bg-gradient-to-r from-blue-50 to-pink-100 min-h-screen flex flex-col items-center justify-center py-10 px-5">
+      <div className="container mx-auto flex flex-col items-center text-center">
         <Image
           src="/munpic.png"
           alt="Muneer"
-          width={400}
-          height={400}
+          width={200}
+          height={200}
           priority
-          className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
+          className="w-48 h-48 mb-6 rounded-full border-4 border-blue-300 shadow-lg"
         />
-        <div className="text-center lg:w-2/3 w-full">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium hover:text-white text-blue-800">
-            About Me
-          </h1>
-          <p className="mb-8 leading-relaxed hover:text-white text-blue-600">
-            I am a dedicated web developer with a passion for creating user-centric applications. Leveraging my expertise in front-end development and a background as a pharmacist, I bring a unique perspective to building solutions that prioritize functionality and aesthetics. Skilled in TypeScript, HTML, CSS, Next.js, and Figma, I thrive on tackling challenges at the intersection of healthcare and web technology. My goal is to craft impactful, innovative solutions that enhance user experiences and make a difference.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <Button
-              aria-label="LinkedIn"
-              className="inline-flex text-xl text-blue-700 hover:bg-pink-300"
-            >
-              <FaLinkedin />
-            </Button>
-            <Button
-              aria-label="GitHub"
-              className="inline-flex text-xl text-blue-700 hover:bg-pink-300"
-            >
-              <FaGithub />
-            </Button>
-            <Button
-              aria-label="Vercel"
-              className="inline-flex text-xl text-blue-700 hover:bg-pink-300"
-            >
-              <SiVercel />
-            </Button>
-            <Button
-              aria-label="WhatsApp"
-              className="inline-flex text-xl text-blue-700 hover:bg-pink-300"
-            >
-              <FaWhatsapp />
-            </Button>
-            <Button
-              aria-label="Facebook"
-              className="inline-flex text-xl text-blue-700 hover:bg-pink-300"
-            >
-              <FaFacebook />
-            </Button>
-          </div>
+        <h1 className="text-4xl font-extrabold mb-4 text-blue-800">About Me</h1>
+        <p className="mb-6 text-lg text-gray-700 max-w-2xl leading-relaxed">
+          I am a dedicated web developer passionate about crafting user-centric applications. My expertise in front-end development, combined with my pharmacy background, helps me build impactful solutions. Skilled in TypeScript, HTML, CSS, Next.js, and Figma, I thrive on challenges that merge healthcare and web technology.
+        </p>
+        <div className="flex space-x-4">
+          <Button className="bg-blue-700 text-white hover:bg-blue-600"><FaLinkedin /></Button>
+          <Button className="bg-gray-900 text-white hover:bg-gray-800"><FaGithub /></Button>
+          <Button className="bg-black text-white hover:bg-gray-700"><SiVercel /></Button>
+          <Button className="bg-green-500 text-white hover:bg-green-400"><FaWhatsapp /></Button>
+          <Button className="bg-blue-600 text-white hover:bg-blue-500"><FaFacebook /></Button>
         </div>
       </div>
       <Skills />
@@ -76,39 +49,37 @@ const About = () => {
   );
 };
 
-// Skills Component with Progress Bars
-interface Skill {
+// Skills Component
+interface SkillProps {
   skill: string;
   level: number;
 }
 
-const SkillBar: React.FC<Skill> = ({ skill, level }) => (
-  <div>
-    <p className="mb-3 text-2xl text-blue-700 font-semibold ml-16">{skill}</p>
-    <div className="w-[80%] bg-gray-300 h-5 mb-4 rounded-2xl">
+const SkillBar: React.FC<SkillProps> = ({ skill, level }) => (
+  <div className="w-full max-w-lg mx-auto mb-6">
+    <p className="text-lg font-semibold text-blue-800">{skill}</p>
+    <div className="w-full bg-gray-300 h-6 rounded-full overflow-hidden">
       <div
-        className="bg-pink-300 h-full rounded-2xl"
+        className="h-full bg-gradient-to-r from-blue-400 to-pink-400 rounded-full transition-all"
         style={{ width: `${level}%` }}
       ></div>
     </div>
   </div>
 );
 
-export const Skills: React.FC = () => {
-  const skills: Skill[] = [
-    { skill: 'HTML', level: 80 },
-    { skill: 'CSS', level: 70 },
-    { skill: 'JavaScript', level: 60 },
-    { skill: 'TypeScript', level: 70 },
-    { skill: 'React', level: 40 },
-    { skill: 'Next.js', level: 40 },
+const Skills: React.FC = () => {
+  const skills: SkillProps[] = [
+    { skill: 'HTML', level: 90 },
+    { skill: 'CSS', level: 85 },
+    { skill: 'JavaScript', level: 80 },
+    { skill: 'TypeScript', level: 75 },
+    { skill: 'React', level: 70 },
+    { skill: 'Next.js', level: 65 },
   ];
 
   return (
-    <div>
-      <h2 className="mt-18 mb-24 text-center text-4xl font-bold underline text-blue-800">
-        My Skills
-      </h2>
+    <div className="mt-12 text-center w-full">
+      <h2 className="text-3xl font-bold text-blue-800 mb-8 underline">My Skills</h2>
       {skills.map((s) => (
         <SkillBar key={s.skill} skill={s.skill} level={s.level} />
       ))}
@@ -116,5 +87,4 @@ export const Skills: React.FC = () => {
   );
 };
 
-// Default export is required for Next.js pages
 export default About;

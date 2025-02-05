@@ -1,44 +1,49 @@
-'use client';
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
-// Import the logo image at the top
+// Import the logo image
 import logoImage from "../../../public/logo-gmu.png";
 
 const Footer = () => {
   return (
-    <div className="bg-blue-200">
-      <footer className="text-SLATE-900 body-font">
-        <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-          <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-            <Image
-              src={logoImage}  // Use the imported image here
-              alt="GHULAM MUNEER UDDIN"
-              width={100}
-              height={100}
-              className="w-[58px]"
-            />
-            <span className="ml-3 text-xl">Ghulam Muneer Uddin </span>
-          </a>
-          <p className="text-sm text-red-950 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
-            © 2024 Ghulam Muneer Uddin
-          </p>
-          <span className="inline-flex sm:ml- sm:mt-0 mt-4 justify-center sm:justify-start">
-            <Link target="_blank" href={"https://www.facebook.com/ghulam.muneeruddin/"}>
-              <FaFacebook className="text-3xl hover:text-[#0000FF]" />
-            </Link>
-            <Link target="_blank" href={"https://github.com/00Muneer12/"}>
-              <FaGithub className="text-3xl hover:text-[#2b3137]" />
-            </Link>
-            <Link target="_blank" href={"https://www.linkedin.com/in/ghulam-muneer-uddin-942a8728b/"}>
-              <FaLinkedin className="text-3xl hover:text-[#00008B]" />
-            </Link>
-          </span>
+    <footer className="bg-slate-900 text-white py-6">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
+        
+        {/* Logo & Branding */}
+        <div className="flex items-center gap-3">
+          <Image
+            src={logoImage}
+            alt="Ghulam Muneer Uddin"
+            width={50}
+            height={50}
+            className="rounded-lg"
+          />
+          <span className="text-xl font-semibold text-yellow-500">Ghulam Muneer Uddin</span>
         </div>
-      </footer>
-    </div>
+
+        {/* Copyright Text */}
+        <p className="text-sm text-gray-400 mt-4 md:mt-0">
+          © {new Date().getFullYear()} Ghulam Muneer Uddin. All Rights Reserved.
+        </p>
+
+        {/* Social Links */}
+        <div className="flex gap-6 mt-4 md:mt-0">
+          <Link href="https://www.facebook.com/ghulam.muneeruddin/" target="_blank">
+            <FaFacebook className="text-2xl text-blue-600 hover:text-blue-400 transition-all" />
+          </Link>
+          <Link href="https://github.com/00Muneer12/" target="_blank">
+            <FaGithub className="text-2xl text-gray-300 hover:text-gray-500 transition-all" />
+          </Link>
+          <Link href="https://www.linkedin.com/in/ghulam-muneer-uddin-942a8728b/" target="_blank">
+            <FaLinkedin className="text-2xl text-blue-500 hover:text-blue-300 transition-all" />
+          </Link>
+        </div>
+
+      </div>
+    </footer>
   );
 };
 
