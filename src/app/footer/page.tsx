@@ -41,7 +41,7 @@ const Footer = () => {
           <Link href="https://www.linkedin.com/in/ghulam-muneer-uddin-942a8728b/" target="_blank">
             <FaLinkedin className="text-2xl text-blue-500 hover:text-blue-300 transition-all" />
           </Link>
-          <Link href="https://github.com/00Muneer12/" target="_blank">
+          <Link href="https://x.com/GhulamMuneer111/" target="_blank">
             <FaXTwitter className="text-2xl text-gray-300 hover:text-gray-500 transition-all" />
           </Link>
         </div>
