@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 // Import the logo image
 import logoImage from "../../../public/logo-gmu.png";
@@ -39,6 +40,9 @@ const Footer = () => {
           </Link>
           <Link href="https://www.linkedin.com/in/ghulam-muneer-uddin-942a8728b/" target="_blank">
             <FaLinkedin className="text-2xl text-blue-500 hover:text-blue-300 transition-all" />
+          </Link>
+          <Link href="https://github.com/00Muneer12/" target="_blank">
+            <FaFaXTwitter className="text-2xl text-gray-300 hover:text-gray-500 transition-all" />
           </Link>
         </div>
 
