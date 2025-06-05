@@ -42,7 +42,7 @@ const Footer = () => {
             <FaLinkedin className="text-2xl text-blue-500 hover:text-blue-300 transition-all" />
           </Link>
           <Link href="https://github.com/00Muneer12/" target="_blank">
-            <FaFaXTwitter className="text-2xl text-gray-300 hover:text-gray-500 transition-all" />
+            <FaXTwitter className="text-2xl text-gray-300 hover:text-gray-500 transition-all" />
           </Link>
         </div>
 
